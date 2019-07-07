@@ -1,0 +1,16 @@
+
+
+<h1> welcome to count</h1>
+<a href='{% url "homep" %}'>Go to homepage</a>
+
+<p style="color: #546821"> You have {{count}} words in your text.</p>
+<h3>Your Text: </h3>
+{{fulltext}}
+
+<h2>Word Count: </h2>
+
+{% for word, count in wordcount%}
+
+{{ word }}:	{{ count }}<br/>
+
+{% endfor %}
